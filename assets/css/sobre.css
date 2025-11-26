@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     font-family: "Playfair Display", serif;
+    color: #333;
 }
 
 main {
@@ -17,37 +19,22 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 20px 0;
 }
 
-.quadrado {
-    width: 400px;
-    height: 400px;
-    background-color: #5f84a2;
-    margin: 2rem;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.quadrado p {
-    margin-top: 150px;
-    font-size: 1.5rem;
+.content-section {
+    width: 95%;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 header {
     width: 100%;
     height: 6rem;
-    background-color: #001d36
-    ;
+    background-color: #001d36;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-h1 {
-    color: white;
 }
 
 ul {
@@ -75,7 +62,15 @@ li a {
     text-decoration: none;
     font-family: "Playfair Display", serif;
     white-space: nowrap;
+    font-size: 1.15rem;
 }
+
+  .fileira {
+    width: 90%;
+    height: 2px;
+    background-color: #000000;
+    margin: 0 auto 3rem auto;
+  }
 
 .Entrevista {
     column-count: 3;
@@ -86,16 +81,32 @@ li a {
     align-items: flex-start;
 }
 
-.Entrevista h4 {
-    margin-top: 9%;
+.qa-block {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
-.Entrevista h5 {
-    margin-top: 8%;
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    font-weight: 700;
+    padding: 1rem 3%;
+    box-sizing: border-box;
+    color: #000000;  
+  }
+
+.Entrevista h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+    font-weight: 700;
 }
 
 .Entrevista p {
     align-items: flex-start;
+    line-height: 1.6;
 }
 
   footer {
@@ -108,4 +119,78 @@ li a {
 
 footer p {
     font-size: 1rem;
+}
+
+/* ----- RESPONSIVO ----- */
+@media screen and (max-width: 900px) {
+  header {
+    height: 5rem;
+  }
+  header img {
+    height: 4rem;
+    max-height: 6rem;
+  }
+  li a {
+    padding: 12px;
+    font-size: 16px;
+  }
+  .topnav input[type=text] {
+    font-size: 14px;
+    padding: 4px;
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .topnav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; /* centraliza no celular */
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  /* Garante que ícones fiquem em linha */
+  .topnav a {
+    flex: 0 0 auto; /* não permite crescer ou encolher */
+    width: auto;
+    padding: 8px 12px;
+  }
+
+  /* Input quebra para linha só se necessário */
+  .topnav input[type=text] {
+    flex: 1 1 100%;
+    min-width: 120px;
+    max-width: 100%;
+    margin: 4px 0 0 0;
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    height: 4.5rem;
+  }
+  header img {
+    height: 3.5rem;
+    max-height: 5rem;
+  }
+  li a {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+  .topnav input[type=text] {
+    font-size: 12px;
+    padding: 4px;
+  }
 }
