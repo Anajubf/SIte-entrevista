@@ -28,6 +28,20 @@ header {
     align-items: center;
 }
 
+header h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    text-decoration: none;
+}
+
 h1 {
     color: white;
 }
@@ -140,8 +154,3 @@ footer {
     text-align: center;
     padding: 1.5rem;
   }
-
-footer p {
-    font-size: 1rem;
-}
-
